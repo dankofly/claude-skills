@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Österreichischer Steuerberater 2026</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Disclaimer Banner -->
+        <div class="disclaimer-banner" role="alert">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:-2px;margin-right:4px"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            KI-Assistent — keine Steuerberatung. Alle Berechnungen sind Richtwerte.
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>Steuerberater <span class="year">2026</span></h1>
+                <p class="subtitle">Österreichisches Steuerrecht — powered by Claude</p>
+                <button id="new-chat-btn" class="btn-new-chat" title="Neuer Chat">
+                    Neuer Chat
+                </button>
+            </div>
+        </header>
+
+        <!-- Chat Area -->
+        <main class="chat-area" id="chat-area">
+            <!-- Welcome Message -->
+            <div class="welcome" id="welcome">
+                <h2>Willkommen!</h2>
+                <p>Ich helfe Ihnen bei Fragen zum österreichischen Steuerrecht 2026.</p>
+                <p>Fragen Sie mich z.B.:</p>
+                <div class="quickstart-buttons">
+                    <button class="quickstart-btn" data-question="Wie viel Einkommensteuer zahle ich bei 60.000 Euro Jahreseinkommen?">
+                        Einkommensteuer bei 60.000 €
+                    </button>
+                    <button class="quickstart-btn" data-question="GmbH oder Einzelunternehmen — was ist bei 100.000 Euro Gewinn steuerlich besser?">
+                        GmbH oder Einzelunternehmen?
+                    </button>
+                    <button class="quickstart-btn" data-question="Bin ich mit 50.000 Euro Umsatz Kleinunternehmer?">
+                        Bin ich Kleinunternehmer?
+                    </button>
+                    <button class="quickstart-btn" data-question="Was kostet mich ein Firmenwagen mit 150 g/km CO2 und 45.000 Euro Listenpreis steuerlich?">
+                        Firmenwagen-Kosten?
+                    </button>
+                    <button class="quickstart-btn" data-question="Wie werden Krypto-Gewinne in Österreich besteuert?">
+                        Krypto-Steuern?
+                    </button>
+                </div>
+            </div>
+
+            <!-- Messages Container -->
+            <div class="messages" id="messages" aria-live="polite" aria-relevant="additions"></div>
+        </main>
+
+        <!-- Input Area -->
+        <footer class="input-area">
+            <div class="input-container">
+                <label for="user-input" class="sr-only">Ihre Steuerfrage</label>
+                <textarea
+                    id="user-input"
+                    placeholder="Ihre Frage zum österreichischen Steuerrecht..."
+                    rows="1"
+                    maxlength="2000"
+                    aria-label="Ihre Frage zum österreichischen Steuerrecht"
+                ></textarea>
+                <button id="send-btn" class="btn-send" title="Senden" aria-label="Nachricht senden">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/chat.js"></script>
+</body>
+</html>

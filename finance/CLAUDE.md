@@ -6,8 +6,9 @@ This guide covers the finance skill and its Python automation tools.
 
 **Available Skills:**
 1. **financial-analyst/** - Financial statement analysis, ratio analysis, DCF valuation, budgeting, forecasting (4 Python tools)
+2. **austrian-tax-advisor/** - Austrian tax calculations (ESt, KöSt, USt, KESt, ImmoESt, Krypto), Rechtsformvergleich, Steueroptimierung + Web-Chatbot (7 Python tools + FastAPI chatbot)
 
-**Total Tools:** 4 Python automation tools, 3 knowledge bases, 5 templates
+**Total Tools:** 11 Python automation tools, 8 knowledge bases, 9 templates
 
 ## Python Automation Tools
 
@@ -89,6 +90,32 @@ python financial-analyst/scripts/forecast_builder.py forecast_data.json --format
 - Process files locally (no API calls)
 - Include argparse CLI with `--help` support
 
+### Austrian Tax Advisor Tools (`austrian-tax-advisor/scripts/`)
+
+**5-7. Einkommensteuer, KöSt, USt, Sachbezug, IFB, ImmoESt, Krypto**
+
+All 7 tools follow the same pattern:
+```bash
+python austrian-tax-advisor/scripts/<script>.py input.json
+python austrian-tax-advisor/scripts/<script>.py input.json --format json
+echo '{"key": "value"}' | python austrian-tax-advisor/scripts/<script>.py -
+```
+
+| Script | Purpose |
+|---|---|
+| `einkommensteuer_rechner.py` | ESt 2026 (7 Stufen, Absetzbeträge, Familienbonus) |
+| `koerperschaftsteuer_rechner.py` | KöSt 23%, KESt, Rechtsformvergleich |
+| `umsatzsteuer_rechner.py` | USt-Zahllast, Kleinunternehmerregelung |
+| `sachbezug_rechner.py` | PKW-Sachbezug, steuerfreie Benefits |
+| `investitionsfreibetrag_rechner.py` | IFB 20%/22%, Forschungsprämie 14% |
+| `immobilienertragssteuer_rechner.py` | ImmoESt 30%, Alt-/Neuvermögen |
+| `krypto_steuer_rechner.py` | KESt 27,5% Krypto, Portfolio-Tracking |
+
+**Web-Chatbot** (Claude API + Tool Use):
+```bash
+cd austrian-tax-advisor/chatbot && pip install -r requirements.txt && uvicorn app:app --port 8000
+```
+
 ## Related Skills
 
 - **C-Level:** Strategic financial decision-making -> `../c-level-advisor/`
@@ -97,6 +124,6 @@ python financial-analyst/scripts/forecast_builder.py forecast_data.json --format
 
 ---
 
-**Last Updated:** February 2026
-**Skills Deployed:** 1/1 finance skills production-ready
-**Total Tools:** 4 Python automation tools
+**Last Updated:** March 2026
+**Skills Deployed:** 2/2 finance skills production-ready
+**Total Tools:** 11 Python automation tools + 1 Web-Chatbot

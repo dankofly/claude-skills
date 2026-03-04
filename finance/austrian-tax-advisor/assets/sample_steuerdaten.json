@@ -1,0 +1,79 @@
+{
+  "einkommensteuer": {
+    "bruttoeinkommen": 75000,
+    "abzuege": 1500,
+    "kinder": 2,
+    "kinder_ueber_18": 0,
+    "alleinverdiener": false,
+    "alleinerzieher": false,
+    "pendlerpauschale": 948,
+    "sonderausgaben": 0,
+    "kirchenbeitrag": 400
+  },
+  "koerperschaftsteuer": {
+    "gewinn": 150000,
+    "stammkapital": 35000,
+    "ausschuettung_prozent": 60,
+    "rechtsform": "gmbh",
+    "verlustvortraege": 20000
+  },
+  "umsatzsteuer": {
+    "umsaetze": [
+      {"bezeichnung": "IT-Beratung", "netto": 85000, "steuersatz": 20},
+      {"bezeichnung": "Schulungen", "netto": 12000, "steuersatz": 20},
+      {"bezeichnung": "Fachbücher-Verkauf", "netto": 3000, "steuersatz": 10}
+    ],
+    "vorsteuer": 8500,
+    "ist_kleinunternehmer": null
+  },
+  "sachbezug": {
+    "dienstwagen": {
+      "listenpreis": 45000,
+      "co2_emission": 135,
+      "ist_elektro": false,
+      "privat_km_monat": 600
+    },
+    "benefits": [
+      {"typ": "zukunftssicherung", "betrag": 300},
+      {"typ": "essensgutscheine_gaststaette", "betrag": 0, "tage": 220},
+      {"typ": "mitarbeiterrabatt", "betrag": 800},
+      {"typ": "oeffi_ticket", "betrag": 1095},
+      {"typ": "weihnachtsgeschenk", "betrag": 150}
+    ]
+  },
+  "investitionsfreibetrag": {
+    "investitionen": [
+      {"bezeichnung": "CNC-Fräsmaschine", "betrag": 250000, "kategorie": "standard"},
+      {"bezeichnung": "Photovoltaikanlage", "betrag": 180000, "kategorie": "oeko"},
+      {"bezeichnung": "Gebrauchter Gabelstapler", "betrag": 25000, "kategorie": "gebraucht"},
+      {"bezeichnung": "Bürostühle", "betrag": 800, "kategorie": "standard"},
+      {"bezeichnung": "Tesla Model 3", "betrag": 42000, "kategorie": "oeko"}
+    ],
+    "gewinn": 350000,
+    "forschungsaufwendungen": 75000
+  },
+  "immobilienertragssteuer": {
+    "kaufdatum": "2015-06-15",
+    "kaufpreis": 280000,
+    "verkaufsdatum": "2026-04-01",
+    "verkaufspreis": 420000,
+    "ist_hauptwohnsitz": false,
+    "hauptwohnsitz_jahre": 0,
+    "ist_selbst_hergestellt": false,
+    "herstellungskosten": 0,
+    "instandsetzungskosten": 35000,
+    "nebenkosten_kauf": 18000,
+    "nebenkosten_verkauf": 14000,
+    "umwidmung_nach_1987": false
+  },
+  "krypto_steuer": {
+    "transaktionen": [
+      {"typ": "kauf", "datum": "2020-01-15", "krypto": "BTC", "menge": 1.0, "preis_eur": 7500},
+      {"typ": "kauf", "datum": "2022-06-01", "krypto": "BTC", "menge": 0.5, "preis_eur": 12500},
+      {"typ": "kauf", "datum": "2023-03-01", "krypto": "ETH", "menge": 10.0, "preis_eur": 15000},
+      {"typ": "verkauf", "datum": "2026-01-15", "krypto": "BTC", "menge": 0.8, "preis_eur": 56000},
+      {"typ": "tausch", "datum": "2026-02-01", "krypto_von": "ETH", "krypto_nach": "SOL", "menge": 5.0, "wert_eur": 12000},
+      {"typ": "staking", "datum": "2026-03-01", "krypto": "ETH", "menge": 0.15, "wert_eur": 525}
+    ]
+  }
+}
